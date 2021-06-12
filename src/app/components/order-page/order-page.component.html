@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3 col-sm-12">
+      <h5 class="text-center">Software Engineers</h5>
+      <br>
+      <div class="col-12 mb-4 mr-2 pr-4">
+        <button class="btn btn-success flr ">Add New</button>
+
+      </div>
+      <br>
+      <div class="custom-row">
+        <ul class="custom-ul">
+          <li class="custom-li" *ngFor="let user of userLists ; let i = index"  [ngClass]="{'active': selectedTab ==i }">
+            <span (click)="getDetailofEngineer(user,i)" class="custom-span">{{user.name}} </span>
+            <button (click)="editExistingEngineer()" class="btn btn-secondary flr">Edit</button>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="col-md-9">
+      <h5 class="text-center">Selected Software Engineer Details</h5>
+      name: string
+objective: string
+contactimagePath: string
+techdetails: technologydetails[]
+TECH_DETAILS DETAILS
+technology: string (Sample: c#/asp.net/reactJS)
+yearofexperience: number
+
+<table class="table table-hover">
+  <thead>
+
+  </thead>
+  <tbody>
+    <tr>
+      <th>Name</th>
+      <td>Ali</td>
+    </tr>
+    <tr>
+      <th>objective</th>
+      <td>Ali</td>
+    </tr><tr>
+      <th>contactimagePath</th>
+      <td>Ali</td>
+    </tr><tr>
+      <th>technology</th>
+      <td>jquery</td>
+    </tr><tr>
+      <th>yearofexperience</th>
+      <td>2 year</td>
+    </tr><tr>
+      <th>Name</th>
+      <td>Ali</td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+    </div>
+  </div>
+</div>
